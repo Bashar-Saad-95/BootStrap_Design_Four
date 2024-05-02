@@ -1,0 +1,272 @@
+:root {
+    --dark-color: #19283f;
+    --green-color:#33d1cc;
+    --red-color:#ff3150;
+    --yellow-color:#ffc400;
+    --section-color:rgb(233, 232, 232);
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+}
+.main-btn {
+    background-color: var(--red-color);
+    color: var(--yellow-color);
+    padding: 0.5rem 1rem;
+    /*font-weight: bold;*/
+    font-family: cursive
+} 
+.type-font {
+    font-family: cursive
+}
+.main-title::after {
+    content: "";
+    width: 120px;
+    height: 2px;
+    background-color: var(--green-color);
+    position: absolute;
+    bottom: -20px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+/*Start Navbar*/
+.navbar {
+    background-color: var(--dark-color);
+    font-family: cursive;
+}
+.navbar .navbar-nav .nav-link {
+    color: white;
+}
+.navbar .navbar-nav .nav-link.active,
+.navbar .navbar-nav .nav-link:focus,
+.navbar .navbar-nav .nav-link:hover {
+    color: var(--green-color);
+}
+.container .navbar-brand:first-child > span {
+    font-size: 30px;
+}
+.container .navbar-brand span:first-child {
+    font-weight: bold;
+    color: whitesmoke;
+    /*font-family:'Times New Roman', Times, serif;*/
+    font-family: cursive;
+}
+.container .navbar-brand span:last-child {
+    color: #33d1cc;
+    font-size: 15px;
+}
+.navbar .container .collapse .search {
+    border-left: 1px solid var(--green-color);
+}
+.navbar .container .collapse .search {
+    cursor: pointer;
+    color: var(--green-color);
+}
+.navbar .navbar-toggler {
+    color: white;
+    font-size: 20px;
+    border-color: white;
+}
+/*End Navbar*/
+
+/*Start Landing*/
+.landing {
+    background-color: var(--dark-color);
+    min-height: calc(100vh - 72px);
+    /*display: flex;
+    justify-content: center;
+    align-items: center;*/
+}
+/*End Landing*/
+
+/*Start Features*/
+.features .icon-holder {
+    height: 200px;
+}
+.features .icon-holder svg {
+    left: 50%;
+    transform: translateX(-50%);
+}
+.features .container .main-title img {
+    align-items: center;
+    width: 100px;;
+}
+.features .container .row .feat .icon-holder .number {
+    font-size: 12rem;
+    color: var(--green-color);
+    margin-left: 10px;
+}
+.features .container .row .feat {
+    color: var(--yellow-color);
+}
+/*End Features*/
+
+/*Start Our Work*/
+.our-work {
+    background-color: var(--section-color);
+}
+.our-work .container ul .active {
+    background-color: var(--red-color);
+    color: var(--yellow-color);
+}
+.our-work .container ul li {
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+    font-family: cursive;
+}
+
+.our-work .container .row .box {
+    padding: 5px;
+    overflow: hidden;
+    position: relative;
+    border-radius: 5px;
+}
+
+.our-work .container .main-title img {
+    align-items: center;
+    width: 100px;
+}
+.our-work .container ul li:not(.active):hover {
+    color: var(--red-color);
+}
+.our-work .container .row .box img {
+    border-radius: 5px  ;
+}
+.our-work .container .row .box::before {
+    content: attr(data-work);
+    position: absolute;
+    background-color: #33d1cc59;
+    width: calc(100% - 10px);
+    height: calc(100% - 10px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+    color: white;
+    transition: 0.5s;
+    font-size: 1.5rem;
+    transform: translateX(calc(-100% - 5px));
+}
+.our-work .container .row .box:hover::before {
+    transform: translateX(0);
+}
+/*End Our Work*/
+
+/*Start Stuff*/
+.stuff .container img {
+    width: 100px;
+}
+.stuff .container .description {
+    max-width: 500px;
+}
+.stuff .container .row .images img {
+    width: 70%;
+    border-radius: 5px;
+}
+/*End Stuff*/
+
+/*Start Our Team*/
+.our-team {
+    background-color: var(--section-color);
+}
+.our-team .container h2 {
+    color: var(--yellow-color);
+    font-family: cursive
+}
+.our-team .container .row .box h4 {
+    background-color:var(--green-color);
+}
+.our-team .container .row img {
+    border-radius: 5px 5px 0px 0px;
+}
+/*End Our Team*/
+
+/*Start Techs*/
+.techs .container .row img {
+    width: 100px;
+    border-radius: 4px;
+}
+/*End Techs*/
+
+/*Start Project*/
+.project {
+    background-color: var(--dark-color);
+}
+.project .description {
+    max-width: 500px;
+}
+.blog .container img {
+    align-items: center;
+    width: 100px;
+}
+/*End Project*/
+
+
+/*Start Subscribe*/
+.subscribe {
+    background-color: var(--yellow-color);
+}
+.subscribe .container .row input {
+    border: none;
+    border-bottom: 1px solid white;
+    border-radius: 10px;
+    cursor: pointer;
+}
+.subscribe .container .row .sub {
+    margin-top: 12px;
+}
+.subscribe .container .row input:focus {
+    outline: none   ;
+}
+.subscribe .container .row .btn-primary {
+    margin-top: 0px;
+}
+.subscribe .container form ::placeholder {
+    color: white;
+    text-align: center;
+}
+/*End Subscribe*/
+
+/*Start Footer*/
+.footer {
+    background-color: var(--dark-color);
+}
+.footer .container .row .copyright > span {
+    color: var(--green-color);
+}
+.footer .container .row .copyright div span {
+    color: var(--yellow-color);
+}
+.footer .contact ul svg {
+    width: 20px;
+    height: 20px;
+}
+.footer .container .row .contact ul {
+    gap: 2.4rem !important;
+}
+.footer .facebook {
+    color: white;
+    background-color: #1877f2;
+}
+.footer .twitter {
+    color: white;
+    background-color: #1da1f2;
+}
+.footer .youtube {
+    color: white;
+    background-color: #ff0000;
+}
+.footer .instagram {
+    color: white;
+    background-color: #fd1d1d;
+}
+.footer .instagram {
+    color: white;
+    background-color: #fd1d1d;
+}
+.footer .linkedin {
+    color: white;
+    background-color: #0a66c2;
+}
+/*End Footer*/
